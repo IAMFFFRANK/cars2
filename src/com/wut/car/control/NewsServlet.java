@@ -12,30 +12,36 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet("/NewsServlet")
 public class NewsServlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public NewsServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
-
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+	  doPost(request,response);
 	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+	String method=request.getParameter("method");
+	switch(method) {
+	case"listALL":
+	{
+		System.out.println("显示所有的新闻方法");
+		break;
+	}
+	case"add":
+	{
+		System.out.println("添加新闻的方法");
+
+		break;
+	}
+	case"delete":
+	{
+		System.out.println("删除新闻的方法");
+
+		break;
+	}
+	case"update":
+	{
+		System.out.println("修改新闻的方法");
+
+		break;
+	}
+	}
 	}
 
 }

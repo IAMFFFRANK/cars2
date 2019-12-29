@@ -71,9 +71,10 @@
   <li>
    <dl>
     <dt>新闻</dt>
-    <dd><a href="user_list.html">新闻列表</a></dd>
-    <dd><a href="user_detail.html">添加新闻</a></dd>
-    <dd><a href="user_rank.html">删除新闻</a></dd>
+    <dd><a href="NewsServlet?method=listALL"class="active">新闻列表</a></dd>
+    <dd><a href="NewsServlet?method=add">添加新闻</a></dd>
+    <dd><a href="NewsServlet?method=delete">删除新闻</a></dd>
+    <dd><a href="NewsServlet?method=update">修改新闻</a></dd>
    </dl>
   </li>
   
